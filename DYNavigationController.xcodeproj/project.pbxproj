@@ -14,7 +14,7 @@
 		411D3B507540A47B8DB88804 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 411D3B507540A47B8DB88803 /* main.m */; };
 		411D3B507540A47B8DB88808 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 411D3B507540A47B8DB88807 /* AppDelegate.m */; };
 		411D3B507540A47B8DB8880B /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 411D3B507540A47B8DB8880A /* RootViewController.m */; };
-		411D3B507540A47B8DB8880E /* DYViewController.xib in Resources */ = {isa = PBXBuildFile; };
+		411D3B507540A47B8DB8880E /* (null) in Resources */ = {isa = PBXBuildFile; };
 		411D3B507540A47B8DB88813 /* DYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 411D3B507540A47B8DB88812 /* DYNavigationController.m */; };
 		411D3B507540A47B8DB88816 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 411D3B507540A47B8DB88815 /* DetailViewController.m */; };
 /* End PBXBuildFile section */
@@ -170,7 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				411D3B507540A47B8DB88802 /* InfoPlist.strings in Resources */,
-				411D3B507540A47B8DB8880E /* DYViewController.xib in Resources */,
+				411D3B507540A47B8DB8880E /* (null) in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -252,6 +252,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DYNavigationController/DYNavigationController-Prefix.pch";
 				INFOPLIST_FILE = "DYNavigationController/DYNavigationController-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -263,6 +264,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DYNavigationController/DYNavigationController-Prefix.pch";
 				INFOPLIST_FILE = "DYNavigationController/DYNavigationController-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -287,6 +289,7 @@
 				411D3B507540A47B8DB887F2 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

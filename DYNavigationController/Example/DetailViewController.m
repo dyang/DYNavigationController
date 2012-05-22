@@ -22,28 +22,24 @@
 
     UILabel *popInstruction = [[UILabel alloc] initWithFrame:CGRectMake(10, 100, 300, 40)];
     popInstruction.backgroundColor = [UIColor clearColor];
-    popInstruction.text = @"Swipe right to go back to previous view";
+    popInstruction.text = @"Swipe right to pop current view out";
+    popInstruction.textAlignment = UITextAlignmentCenter;
     [self.view addSubview:popInstruction];
     [popInstruction release];
 
     UILabel *pushInstruction = [[UILabel alloc] initWithFrame:CGRectMake(10, 160, 300, 40)];
     pushInstruction.backgroundColor = [UIColor clearColor];
-    pushInstruction.text = @"Swipe left to reveal one more view";
+    pushInstruction.text = @"Swipe left to push a new view in";
+    pushInstruction.textAlignment = UITextAlignmentCenter;
     [self.view addSubview:pushInstruction];
     [pushInstruction release];
-}
-
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
 }
 
 #pragma mark - DYNavigationControllerDelegate
 
 - (UIViewController *)viewControllerToPush {
     UIViewController *anotherDetailViewController = [[UIViewController alloc] init];
-    anotherDetailViewController.view.backgroundColor = [UIColor blueColor];
+    anotherDetailViewController.view.backgroundColor = [UIColor lightGrayColor];
     return [anotherDetailViewController autorelease];
 }
 

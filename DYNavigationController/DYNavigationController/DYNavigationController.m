@@ -97,11 +97,11 @@
     }
 }
 
-- (UIViewController<DYNavigationControllerDelegate> *)currentViewController {
+- (UIViewController *)currentViewController {
     return [self.viewControllerStack lastObject];
 }
 
-- (UIViewController<DYNavigationControllerDelegate> *)previousViewController {
+- (UIViewController *)previousViewController {
     return [self.viewControllerStack objectAtIndex:self.viewControllerStack.count - 2];
 }
 

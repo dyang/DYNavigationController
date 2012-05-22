@@ -44,8 +44,8 @@
 
 - (void)setUpButtons {
     UIButton *right = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [right setTitle:@"Right" forState:UIControlStateNormal];
-    [right setFrame:CGRectMake(100, 100, 80, 40)];
+    [right setTitle:@"Tap to push a new view in" forState:UIControlStateNormal];
+    [right setFrame:CGRectMake(50, 100, 220, 40)];
     [right addTarget:self action:@selector(pushNewViewIn) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:right];
 }

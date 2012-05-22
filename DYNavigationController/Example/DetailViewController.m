@@ -14,8 +14,6 @@
 
 @implementation DetailViewController
 
-@synthesize navigator = _navigator;
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];

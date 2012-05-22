@@ -10,8 +10,8 @@
 
 @interface DYNavigationController : UIViewController
 
-- (id)initWithRootViewController:(UIViewController <DYNavigationControllerDelegate>*)rootViewController;
-- (void)pushViewController:(UIViewController <DYNavigationControllerDelegate> *)viewController;
+- (id)initWithRootViewController:(UIViewController*)rootViewController;
+- (void)pushViewController:(UIViewController *)viewController;
 - (void)popViewController;
 
 @end

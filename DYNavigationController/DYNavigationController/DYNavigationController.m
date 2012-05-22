@@ -16,8 +16,9 @@
 @property(nonatomic, retain) NSMutableArray *viewControllerStack;
 @property(nonatomic, retain) UISwipeGestureRecognizer *gesture;
 
-- (UIViewController <DYNavigationControllerDelegate> *)currentViewController;
-- (UIViewController <DYNavigationControllerDelegate> *)previousViewController;
+- (UIViewController *)currentViewController;
+- (UIViewController *)previousViewController;
+- (void)setNavigatorIfNeeded:(UIViewController *)viewController;
 - (void)popCurrentViewOut:(UIGestureRecognizer *)gestureRecognizer;
 
 @end
@@ -29,12 +30,12 @@
 
 #pragma mark - Public interface
 
-- (id)initWithRootViewController:(UIViewController<DYNavigationControllerDelegate> *)rootViewController {
+- (id)initWithRootViewController:(UIViewController *)rootViewController {
     if ((self = [super init])) {
         self.viewControllerStack = [NSMutableArray arrayWithObject:rootViewController];
 
-        // Connect DYNavigationController to RootViewController
-        rootViewController.navigator = self;
+        // Connect DYNavigationController to RootViewController if needed
+        [self setNavigatorIfNeeded:rootViewController];
 
         // Add the root view into current view hierarchy
         [self.view addSubview:rootViewController.view];
@@ -45,7 +46,7 @@
     return self;
 }
 
-- (void)pushViewController:(UIViewController <DYNavigationControllerDelegate> *)viewController {
+- (void)pushViewController:(UIViewController *)viewController {
     // Place the new view to the right next to the current view
     viewController.view.frame = CGRectOffset(self.view.bounds, self.view.bounds.size.width, 0);
 
@@ -58,8 +59,8 @@
         viewController.view.frame = self.view.bounds;
     }   completion:^(BOOL finished) {
         if (finished) {
-            // Connect DYNavigationController to viewController
-            viewController.navigator = self;
+            // Connect DYNavigationController to viewController if needed
+            [self setNavigatorIfNeeded:viewController];
 
             // Set up gesture recognizer so that we can respond to swipes
             [viewController.view addGestureRecognizer:self.gesture];
@@ -91,6 +92,12 @@
 }
 
 #pragma mark - Private implementation
+
+- (void)setNavigatorIfNeeded:(UIViewController *)viewController {
+    if ([viewController respondsToSelector:@selector(setNavigator:)]) {
+        [viewController performSelector:@selector(setNavigator:) withObject:self];
+    }
+}
 
 - (UIViewController<DYNavigationControllerDelegate> *)currentViewController {
     return [self.viewControllerStack lastObject];

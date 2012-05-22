@@ -43,6 +43,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     popInstruction.backgroundColor = [UIColor clearColor];
     popInstruction.text = @"Swipe right to pop current view out";
     popInstruction.textAlignment = UITextAlignmentCenter;
+    popInstruction.shadowOffset = CGSizeMake(0, 1);
+    popInstruction.shadowColor = [UIColor whiteColor];
     [self.view addSubview:popInstruction];
     [popInstruction release];
 
@@ -50,6 +52,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
     pushInstruction.backgroundColor = [UIColor clearColor];
     pushInstruction.text = @"Swipe left to push a new view in";
     pushInstruction.textAlignment = UITextAlignmentCenter;
+    pushInstruction.shadowOffset = CGSizeMake(0, 1);
+    pushInstruction.shadowColor = [UIColor whiteColor];
     [self.view addSubview:pushInstruction];
     [pushInstruction release];
 }

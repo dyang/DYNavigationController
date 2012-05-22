@@ -1,0 +1,288 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		411D3B507540A47B8DB887F8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 411D3B507540A47B8DB887F7 /* UIKit.framework */; };
+		411D3B507540A47B8DB887FA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 411D3B507540A47B8DB887F9 /* Foundation.framework */; };
+		411D3B507540A47B8DB887FC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 411D3B507540A47B8DB887FB /* CoreGraphics.framework */; };
+		411D3B507540A47B8DB88802 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 411D3B507540A47B8DB88801 /* InfoPlist.strings */; };
+		411D3B507540A47B8DB88804 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 411D3B507540A47B8DB88803 /* main.m */; };
+		411D3B507540A47B8DB88808 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 411D3B507540A47B8DB88807 /* AppDelegate.m */; };
+		411D3B507540A47B8DB8880B /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 411D3B507540A47B8DB8880A /* RootViewController.m */; };
+		411D3B507540A47B8DB8880E /* DYViewController.xib in Resources */ = {isa = PBXBuildFile; };
+		411D3B507540A47B8DB88813 /* DYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 411D3B507540A47B8DB88812 /* DYNavigationController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		411D3B507540A47B8DB887EE /* DYNavigationController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DYNavigationController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		411D3B507540A47B8DB887F7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		411D3B507540A47B8DB887F9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		411D3B507540A47B8DB887FB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		411D3B507540A47B8DB887FF /* DYNavigationController-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "DYNavigationController-Info.plist"; sourceTree = "<group>"; };
+		411D3B507540A47B8DB88800 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		411D3B507540A47B8DB88803 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		411D3B507540A47B8DB88805 /* DYNavigationController-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DYNavigationController-Prefix.pch"; sourceTree = "<group>"; };
+		411D3B507540A47B8DB88806 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		411D3B507540A47B8DB88807 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		411D3B507540A47B8DB88809 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		411D3B507540A47B8DB8880A /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		411D3B507540A47B8DB88811 /* DYNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYNavigationController.h; sourceTree = "<group>"; };
+		411D3B507540A47B8DB88812 /* DYNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYNavigationController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		411D3B507540A47B8DB887F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				411D3B507540A47B8DB887F8 /* UIKit.framework in Frameworks */,
+				411D3B507540A47B8DB887FA /* Foundation.framework in Frameworks */,
+				411D3B507540A47B8DB887FC /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		411D3B507540A47B8DB887EA = {
+			isa = PBXGroup;
+			children = (
+				411D3B507540A47B8DB887EB /* Products */,
+				411D3B507540A47B8DB887F6 /* Frameworks */,
+				411D3B507540A47B8DB887FD /* DYNavigationController */,
+			);
+			sourceTree = "<group>";
+		};
+		411D3B507540A47B8DB887EB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				411D3B507540A47B8DB887EE /* DYNavigationController.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		411D3B507540A47B8DB887F6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				411D3B507540A47B8DB887FB /* CoreGraphics.framework */,
+				411D3B507540A47B8DB887F9 /* Foundation.framework */,
+				411D3B507540A47B8DB887F7 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		411D3B507540A47B8DB887FD /* DYNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				411D3B507540A47B8DB887FE /* Supporting Files */,
+				411D3B507540A47B8DB8880F /* DYNavigationController */,
+				411D3B507540A47B8DB88810 /* Example */,
+			);
+			path = DYNavigationController;
+			sourceTree = "<group>";
+		};
+		411D3B507540A47B8DB887FE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				411D3B507540A47B8DB88805 /* DYNavigationController-Prefix.pch */,
+				411D3B507540A47B8DB88803 /* main.m */,
+				411D3B507540A47B8DB88801 /* InfoPlist.strings */,
+				411D3B507540A47B8DB887FF /* DYNavigationController-Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		411D3B507540A47B8DB8880F /* DYNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				411D3B507540A47B8DB88812 /* DYNavigationController.m */,
+				411D3B507540A47B8DB88811 /* DYNavigationController.h */,
+			);
+			path = DYNavigationController;
+			sourceTree = "<group>";
+		};
+		411D3B507540A47B8DB88810 /* Example */ = {
+			isa = PBXGroup;
+			children = (
+				411D3B507540A47B8DB8880A /* RootViewController.m */,
+				411D3B507540A47B8DB88809 /* RootViewController.h */,
+				411D3B507540A47B8DB88807 /* AppDelegate.m */,
+				411D3B507540A47B8DB88806 /* AppDelegate.h */,
+			);
+			path = Example;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		411D3B507540A47B8DB887EF /* DYNavigationController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 411D3B507540A47B8DB887F0 /* Build configuration list for PBXNativeTarget "DYNavigationController" */;
+			buildPhases = (
+				411D3B507540A47B8DB887F3 /* Sources */,
+				411D3B507540A47B8DB887F4 /* Frameworks */,
+				411D3B507540A47B8DB887F5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DYNavigationController;
+			productName = DYNavigationController;
+			productReference = 411D3B507540A47B8DB887EE /* DYNavigationController.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		411D3B507540A47B8DB887E8 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 411D3B507540A47B8DB887E9 /* Build configuration list for PBXProject "DYNavigationController" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 411D3B507540A47B8DB887EA;
+			productRefGroup = 411D3B507540A47B8DB887EB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				411D3B507540A47B8DB887EF /* DYNavigationController */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		411D3B507540A47B8DB887F5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				411D3B507540A47B8DB88802 /* InfoPlist.strings in Resources */,
+				411D3B507540A47B8DB8880E /* DYViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		411D3B507540A47B8DB887F3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				411D3B507540A47B8DB88804 /* main.m in Sources */,
+				411D3B507540A47B8DB88808 /* AppDelegate.m in Sources */,
+				411D3B507540A47B8DB8880B /* RootViewController.m in Sources */,
+				411D3B507540A47B8DB88813 /* DYNavigationController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		411D3B507540A47B8DB88801 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				411D3B507540A47B8DB88800 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		411D3B507540A47B8DB887EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		411D3B507540A47B8DB887ED /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		411D3B507540A47B8DB887F1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DYNavigationController/DYNavigationController-Prefix.pch";
+				INFOPLIST_FILE = "DYNavigationController/DYNavigationController-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		411D3B507540A47B8DB887F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DYNavigationController/DYNavigationController-Prefix.pch";
+				INFOPLIST_FILE = "DYNavigationController/DYNavigationController-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		411D3B507540A47B8DB887E9 /* Build configuration list for PBXProject "DYNavigationController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				411D3B507540A47B8DB887EC /* Release */,
+				411D3B507540A47B8DB887ED /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		411D3B507540A47B8DB887F0 /* Build configuration list for PBXNativeTarget "DYNavigationController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				411D3B507540A47B8DB887F1 /* Release */,
+				411D3B507540A47B8DB887F2 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 411D3B507540A47B8DB887E8 /* Project object */;
+}

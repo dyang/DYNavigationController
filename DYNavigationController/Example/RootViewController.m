@@ -7,6 +7,7 @@
 //
 
 #import "RootViewController.h"
+#import "DetailViewController.h"
 
 @interface RootViewController ()
 
@@ -16,6 +17,16 @@
 @end
 
 @implementation RootViewController
+
+@synthesize navigator = _navigator;
+
+- (id)init {
+    self = [super init];
+    if (self) {
+        self.view.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
+    }
+    return self;
+}
 
 - (void)viewDidLoad
 {
@@ -40,7 +51,9 @@
 }
 
 - (void)moveToTheRightView {
-    NSLog(@">>> here");
+    DetailViewController *detailViewController = [[DetailViewController alloc] init];
+    [self.navigator pushViewController:detailViewController];
+    [detailViewController release];
 }
 
 @end

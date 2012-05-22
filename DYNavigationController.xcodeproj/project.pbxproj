@@ -16,6 +16,7 @@
 		411D3B507540A47B8DB8880B /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 411D3B507540A47B8DB8880A /* RootViewController.m */; };
 		411D3B507540A47B8DB8880E /* DYViewController.xib in Resources */ = {isa = PBXBuildFile; };
 		411D3B507540A47B8DB88813 /* DYNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 411D3B507540A47B8DB88812 /* DYNavigationController.m */; };
+		411D3B507540A47B8DB88816 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 411D3B507540A47B8DB88815 /* DetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,8 @@
 		411D3B507540A47B8DB8880A /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		411D3B507540A47B8DB88811 /* DYNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYNavigationController.h; sourceTree = "<group>"; };
 		411D3B507540A47B8DB88812 /* DYNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYNavigationController.m; sourceTree = "<group>"; };
+		411D3B507540A47B8DB88814 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		411D3B507540A47B8DB88815 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +112,8 @@
 		411D3B507540A47B8DB88810 /* Example */ = {
 			isa = PBXGroup;
 			children = (
+				411D3B507540A47B8DB88815 /* DetailViewController.m */,
+				411D3B507540A47B8DB88814 /* DetailViewController.h */,
 				411D3B507540A47B8DB8880A /* RootViewController.m */,
 				411D3B507540A47B8DB88809 /* RootViewController.h */,
 				411D3B507540A47B8DB88807 /* AppDelegate.m */,
@@ -180,6 +185,7 @@
 				411D3B507540A47B8DB88808 /* AppDelegate.m in Sources */,
 				411D3B507540A47B8DB8880B /* RootViewController.m in Sources */,
 				411D3B507540A47B8DB88813 /* DYNavigationController.m in Sources */,
+				411D3B507540A47B8DB88816 /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

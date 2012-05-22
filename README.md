@@ -5,6 +5,11 @@ DYNavigationController is a [Backboard](http://itunes.apple.com/us/app/backboard
 
 ![picture](http://f.cl.ly/items/263C0q1w1a1H3p051Q2q/DYNavigationController%20-%20Swipe%20and%20navigate.png "DYNavigationController in action")
 
+Tutorial
+========
+
+You're welcome to check out the following tutorial that I wrote on my blog: http://iappexperience.com/post/23551184719/chromeless.
+
 License
 =======
 

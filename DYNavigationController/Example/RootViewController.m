@@ -12,7 +12,7 @@
 @interface RootViewController ()
 
 - (void)setUpButtons;
-- (void)moveToTheRightView;
+- (void)pushNewViewIn;
 
 @end
 
@@ -46,11 +46,11 @@
     UIButton *right = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [right setTitle:@"Right" forState:UIControlStateNormal];
     [right setFrame:CGRectMake(100, 100, 80, 40)];
-    [right addTarget:self action:@selector(moveToTheRightView) forControlEvents:UIControlEventTouchUpInside];
+    [right addTarget:self action:@selector(pushNewViewIn) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:right];
 }
 
-- (void)moveToTheRightView {
+- (void)pushNewViewIn {
     DetailViewController *detailViewController = [[DetailViewController alloc] init];
     [self.navigator pushViewController:detailViewController];
     [detailViewController release];

@@ -16,18 +16,11 @@
 
 @synthesize navigator = _navigator;
 
-- (id)init {
-    self = [super init];
-    if (self) {
-        self.view.backgroundColor = [UIColor greenColor];
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    self.view.backgroundColor = [UIColor greenColor];
 }
 
 - (void)viewDidUnload

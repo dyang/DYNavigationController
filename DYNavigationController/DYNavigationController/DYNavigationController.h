@@ -12,6 +12,7 @@
 
 - (id)initWithRootViewController:(UIViewController <DYNavigationControllerDelegate>*)rootViewController;
 - (void)pushViewController:(UIViewController <DYNavigationControllerDelegate> *)viewController;
+- (void)popViewController;
 
 @end
 

@@ -20,8 +20,6 @@
 
 - (id)initWithRootViewController:(UIViewController *)rootViewController {
     if ((self = [super init])) {
-        NSLog(@">>> initWithRootViewController");
-        NSLog(@">>> rootViewController.view: %@", rootViewController.view);
         self.rootViewController = rootViewController;
         self.view = rootViewController.view;
     }

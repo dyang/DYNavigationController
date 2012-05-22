@@ -10,6 +10,6 @@
 
 #import "DYNavigationController.h"
 
-@interface DetailViewController : UIViewController
+@interface DetailViewController : UIViewController <DYNavigationControllerDelegate>
 
 @end

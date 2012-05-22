@@ -14,19 +14,20 @@
 @interface DYNavigationController ()
 
 @property(nonatomic, retain) NSMutableArray *viewControllerStack;
-@property(nonatomic, retain) UISwipeGestureRecognizer *gesture;
 
 - (UIViewController *)currentViewController;
 - (UIViewController *)previousViewController;
 - (void)setNavigatorIfNeeded:(UIViewController *)viewController;
+- (void)setUpGestureRecognizers:(UIViewController *)viewController;
+- (void)tearDownGestureRecognizers:(UIViewController *)viewController;
 - (void)popCurrentViewOut:(UIGestureRecognizer *)gestureRecognizer;
+- (void)pushNewViewIn:(UIGestureRecognizer *)gestureRecognizer;
 
 @end
 
 @implementation DYNavigationController
 
 @synthesize viewControllerStack = _viewControllerStack;
-@synthesize gesture = _gesture;
 
 #pragma mark - Public interface
 
@@ -39,9 +40,6 @@
 
         // Add the root view into current view hierarchy
         [self.view addSubview:rootViewController.view];
-
-        self.gesture = [[[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(popCurrentViewOut:)] autorelease];
-       self.gesture.direction = UISwipeGestureRecognizerDirectionRight;
     }
     return self;
 }
@@ -63,7 +61,7 @@
             [self setNavigatorIfNeeded:viewController];
 
             // Set up gesture recognizer so that we can respond to swipes
-            [viewController.view addGestureRecognizer:self.gesture];
+            [self setUpGestureRecognizers:viewController];
 
             // Add the new controller to our viewControllerStack
             [self.viewControllerStack addObject:viewController];
@@ -82,8 +80,8 @@
         [self previousViewController].view.frame = self.view.bounds;
     } completion:^(BOOL finished) {
         if (finished) {
-            // Tear down gesture recognizer
-            [[self currentViewController].view removeGestureRecognizer:self.gesture];
+            // Tear down gesture recognizers
+            [self tearDownGestureRecognizers:[self currentViewController]];
 
             // Remove current view controller from viewControllerStack
             [self.viewControllerStack removeLastObject];
@@ -107,13 +105,42 @@
     return [self.viewControllerStack objectAtIndex:self.viewControllerStack.count - 2];
 }
 
+- (void)setUpGestureRecognizers:(UIViewController *)viewController {
+    // Swipe right: pop the current view and go back one level
+    UISwipeGestureRecognizer *rightSwipeGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(popCurrentViewOut:)];
+    rightSwipeGesture.direction = UISwipeGestureRecognizerDirectionRight;
+    [viewController.view addGestureRecognizer:rightSwipeGesture];
+    [rightSwipeGesture release];
+
+    // Swipe left: push a new view
+    UISwipeGestureRecognizer *leftSwipeGesture = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(pushNewViewIn:)];
+    leftSwipeGesture.direction = UISwipeGestureRecognizerDirectionLeft;
+    [viewController.view addGestureRecognizer:leftSwipeGesture];
+    [leftSwipeGesture release];
+}
+
+- (void)tearDownGestureRecognizers:(UIViewController *)viewController {
+    for (UIGestureRecognizer *gestureRecognizer in [viewController.view gestureRecognizers]) {
+        [viewController.view removeGestureRecognizer:gestureRecognizer];
+    }
+}
+
 - (void)popCurrentViewOut:(UIGestureRecognizer *)gestureRecognizer {
     [self popViewController];
 }
 
+- (void)pushNewViewIn:(UIGestureRecognizer *)gestureRecognizer {
+    // If current view controller responds to viewControllerToPush, then acquire that view controller
+    // and push it to the view hierarchy.
+    UIViewController *currentViewController = [self currentViewController];
+    if ([currentViewController respondsToSelector:@selector(viewControllerToPush)]) {
+        UIViewController *newViewController = [currentViewController performSelector:@selector(viewControllerToPush)];
+        [self pushViewController:newViewController];
+    }
+}
+
 - (void)dealloc {
     [_viewControllerStack release]; _viewControllerStack = nil;
-    [_gesture release]; _gesture = nil;
     [super dealloc];
 }
 

@@ -18,6 +18,10 @@
 
 @protocol DYNavigationControllerDelegate <NSObject>
 
+@optional
+
 @property(nonatomic, assign) DYNavigationController *navigator;
+
+- (UIViewController *)viewControllerToPush;
 
 @end

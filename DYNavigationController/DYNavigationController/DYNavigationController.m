@@ -101,6 +101,12 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
         if (finished) {
             // Tear down gesture recognizers
             [self tearDownGestureRecognizers:[self currentViewController]];
+            
+            // Remove current viewController.view from self.
+            [[self currentViewController].view removeFromSuperview];
+            
+            // Remove current viewController from self.
+            [[self currentViewController] removeFromParentViewController];
 
             // Remove current view controller from viewControllerStack
             [self.viewControllerStack removeLastObject];
